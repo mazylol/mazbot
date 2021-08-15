@@ -1,7 +1,10 @@
 #Scraping functions
 import discord
 from discord.ext import commands
+from discord import Embed
 import requests
+import asyncpraw
+import random
 from geopy.geocoders import Nominatim
 bot = discord.Client()
 bot = commands.Bot(command_prefix='~')
@@ -38,3 +41,27 @@ class scraping(commands.Cog):
    wethr.add_field(name='Humidity',value=current_humidity + "%",inline=False)
    wethr.add_field(name='Weather Description',value=weather_description,inline=False)
    await ctx.reply(embed=wethr)
+
+ @commands.command(name='meme')
+ async def meme(self, ctx, subred="memes"):
+  msg = await ctx.send('Loading meme <a:loading:876534980271013928>')
+  reddit = asyncpraw.Reddit(
+   client_id = "DLbGwlFw-vAvSfZDUp7xcw",
+   client_secret = "UO1lFxp18ckodAnHd4frVkb3OTIXmw",
+   username = "barrybensonbot",
+   password = "Coco2006",
+   user_agent = "pythonpraw")
+  subreddit = await reddit.subreddit(subred)
+  all_subs = []
+  top = subreddit.top(limit=350)
+  async for submission in top:
+   all_subs.append(submission)
+  random_sub = random.choice(all_subs)
+  name = random_sub.title
+  url = random_sub.url
+  embed = Embed(title=f'__{name}__',color=0xFFFF00,timestamp=ctx.message.created_at,url=url)
+  embed.set_image(url=url)
+  embed.set_author(name=ctx.author.display_name,icon_url=ctx.author.avatar_url)
+  embed.set_footer(text='Here is your meme!')
+  await ctx.send(embed=embed)
+  await msg.edit(content=f'<https://reddit.com/r/{subreddit}> :white_check_mark:')
