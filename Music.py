@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='~')
 
 
 
-class Music(commands.Cog):
+class music(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
