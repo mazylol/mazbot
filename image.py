@@ -20,8 +20,8 @@ class image(commands.Cog):
   pfp = Image.open(data)
   pfp = pfp.resize((284,284))
   wanted.paste(pfp, (88,229))
-  wanted.save("profile.jpg")
-  await ctx.reply(file=discord.File("profile.jpg"))
+  wanted.save("finishedwanted.jpg")
+  await ctx.reply(file=discord.File("finishedwanted.jpg"))
 
  @commands.command(name='gay')
  async def gay(self, ctx, user:discord.Member = (None)):
@@ -33,8 +33,8 @@ class image(commands.Cog):
   pfp = Image.open(data)
   pfp = pfp.resize((131,131))
   gay.paste(pfp, (455,63))
-  gay.save("biggae.jpg")
-  await ctx.reply(file=discord.File("biggae.jpg"))
+  gay.save("finishedgay.jpg")
+  await ctx.reply(file=discord.File("finishedgay.jpg"))
 
  @commands.command(name='getpfp')
  async def getpfp(self, ctx, user:discord.Member = (None)):
@@ -51,17 +51,17 @@ class image(commands.Cog):
    await ctx.reply('`Error: Needs a target`')
    return
   else:
-   gay = Image.open("rape.jpg")
+   rape = Image.open("rape.jpg")
    author = ctx.author.avatar_url_as(size=128)
    authdata = BytesIO(await author.read())
    authpfp = Image.open(authdata)
    authpfp = authpfp.resize((131,131))
-   gay.paste(authpfp, (293,37))
-   gay.save("lego.jpg")
+   rape.paste(authpfp, (293,37))
+   rape.save("finishedrape.jpg")
    target = user.avatar_url_as(size=128)
    userdata = BytesIO(await target.read())
    userpfp = Image.open(userdata)
    userpfp = userpfp.resize((131,131))
-   gay.paste(userpfp, (76,320))
-   gay.save("lego.jpg")
-   await ctx.reply(file=discord.File("lego.jpg"))
+   rape.paste(userpfp, (76,320))
+   rape.save("finishedrape.jpg")
+   await ctx.reply(file=discord.File("finishedrape.jpg"))
