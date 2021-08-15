@@ -6,6 +6,9 @@ import requests
 import asyncpraw
 import random
 from geopy.geocoders import Nominatim
+from dotenv import load_dotenv
+load_dotenv()
+import os
 bot = discord.Client()
 bot = commands.Bot(command_prefix='~')
 
@@ -15,7 +18,7 @@ class scraping(commands.Cog):
 
  @commands.command(name='weather')
  async def weather(self, ctx, *, args):
-  api_key = "f7acdab230c0a3c9a66d2557419c2955"
+  api_key = os.getenv('api_key')
   base_url = "http://api.openweathermap.org/data/2.5/weather?"
   locator = Nominatim(user_agent="myGeocoder")
   location = locator.geocode(str(args))
@@ -46,11 +49,12 @@ class scraping(commands.Cog):
  async def meme(self, ctx, subred="memes"):
   msg = await ctx.send('Loading meme <a:loading:876534980271013928>')
   reddit = asyncpraw.Reddit(
-   client_id = "DLbGwlFw-vAvSfZDUp7xcw",
-   client_secret = "UO1lFxp18ckodAnHd4frVkb3OTIXmw",
+   client_id = os.getenv("client_id"),
+   client_secret = os.getenv("client_secret"),
    username = "barrybensonbot",
-   password = "Coco2006",
-   user_agent = "pythonpraw")
+   password = os.getenv("password"),
+   user_agent = "pythonpraw"
+   )
   subreddit = await reddit.subreddit(subred)
   all_subs = []
   top = subreddit.top(limit=350)
