@@ -14,27 +14,27 @@ class image(commands.Cog):
  async def wanted(self, ctx, user:discord.Member = (None)):
   if user is None:
    user = ctx.author
-  wanted = Image.open("wanted.jpg")
+  wanted = Image.open("images/wanted.jpg")
   asset = user.avatar_url_as(size=128)
   data = BytesIO(await asset.read())
   pfp = Image.open(data)
   pfp = pfp.resize((284,284))
   wanted.paste(pfp, (88,229))
-  wanted.save("finishedwanted.jpg")
-  await ctx.reply(file=discord.File("finishedwanted.jpg"))
+  wanted.save("images/finishedwanted.jpg")
+  await ctx.reply(file=discord.File("images/finishedwanted.jpg"))
 
  @commands.command(name='gay')
  async def gay(self, ctx, user:discord.Member = (None)):
   if user is None:
    user = ctx.author
-  gay = Image.open("gaepic.jpg")
+  gay = Image.open("images/gaepic.jpg")
   asset = user.avatar_url_as(size=128)
   data = BytesIO(await asset.read())
   pfp = Image.open(data)
   pfp = pfp.resize((131,131))
   gay.paste(pfp, (455,63))
-  gay.save("finishedgay.jpg")
-  await ctx.reply(file=discord.File("finishedgay.jpg"))
+  gay.save("images/finishedgay.jpg")
+  await ctx.reply(file=discord.File("images/finishedgay.jpg"))
 
  @commands.command(name='getpfp')
  async def getpfp(self, ctx, user:discord.Member = (None)):
@@ -51,17 +51,17 @@ class image(commands.Cog):
    await ctx.reply('`Error: Needs a target`')
    return
   else:
-   rape = Image.open("rape.jpg")
+   rape = Image.open("images/rape.jpg")
    author = ctx.author.avatar_url_as(size=128)
    authdata = BytesIO(await author.read())
    authpfp = Image.open(authdata)
    authpfp = authpfp.resize((131,131))
    rape.paste(authpfp, (293,37))
-   rape.save("finishedrape.jpg")
+   rape.save("images/finishedrape.jpg")
    target = user.avatar_url_as(size=128)
    userdata = BytesIO(await target.read())
    userpfp = Image.open(userdata)
    userpfp = userpfp.resize((131,131))
    rape.paste(userpfp, (76,320))
-   rape.save("finishedrape.jpg")
-   await ctx.reply(file=discord.File("finishedrape.jpg"))
+   rape.save("images/finishedrape.jpg")
+   await ctx.reply(file=discord.File("images/finishedrape.jpg"))
