@@ -9,6 +9,7 @@ from geopy.geocoders import Nominatim
 from dotenv import load_dotenv
 load_dotenv()
 import os
+from yahoo_fin import stock_info as si
 bot = discord.Client()
 bot = commands.Bot(command_prefix='~')
 
@@ -69,9 +70,15 @@ class scraping(commands.Cog):
   if 'comments' in url:
    msg.edit(content='Sorry, you accidently got into a thread try again')
    return
-  embed = Embed(title=f'__{name}__',color=0xFFFF00,timestamp=ctx.message.created_at,url=url)
-  embed.set_image(url=url)
-  embed.set_author(name=ctx.author.display_name,icon_url=ctx.author.avatar_url)
-  embed.set_footer(text='Here is your meme!')
-  await ctx.reply(embed=embed)
+  memeembed = Embed(title=f'__{name}__',color=0xFFFF00,timestamp=ctx.message.created_at,url=url)
+  memeembed.set_image(url=url)
+  memeembed.set_author(name=ctx.author.display_name,icon_url=ctx.author.avatar_url)
+  memeembed.set_footer(text='Here is your meme!')
+  await ctx.reply(embed=memeembed)
   await msg.delete()
+
+ @commands.command(name='stock')
+ async def stock(self, ctx, *, args):
+  price = si.get_live_price(args)
+  priceembed = Embed(title=f'Stock price for {args}',description='Price: {:.2f}'.format(price),color=0xFFFF00)
+  await ctx.reply(embed=priceembed)

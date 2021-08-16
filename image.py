@@ -1,6 +1,7 @@
 #Image utilities
 import discord
 from discord.ext import commands
+from discord import Embed
 from PIL import Image
 from io import BytesIO
 bot = discord.Client()
@@ -41,7 +42,7 @@ class image(commands.Cog):
   if user is None:
    user=ctx.author
   pfp = user.avatar_url
-  pfpembed = discord.Embed(title="Ew that's an ugly profile pic",color=0xFFFF00)
+  pfpembed = Embed(title="Ew that's an ugly profile pic",color=0xFFFF00)
   pfpembed.set_image(url=pfp)
   await ctx.reply(embed=pfpembed)
 
