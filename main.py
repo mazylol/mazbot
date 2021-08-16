@@ -19,7 +19,7 @@ bot.add_cog(scraping(bot))
 
 @bot.event
 async def on_ready():
- game = discord.Game('You like jazz? | jazz help')
+ game = discord.Game('You like jazz? | ~help')
  await bot.change_presence(status=discord.Status.online, activity=game)
  print('We have logged in as {0.user}'.format(bot))
 
