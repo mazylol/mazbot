@@ -64,12 +64,6 @@ class scraping(commands.Cog):
   random_sub = random.choice(all_subs)
   name = random_sub.title
   url = random_sub.url
-  if 'gif' in url:
-   await msg.edit(content='Sorry, this is a gif try again')
-   return
-  if 'comments' in url:
-   msg.edit(content='Sorry, you accidently got into a thread try again')
-   return
   memeembed = Embed(title=f'__{name}__',color=0xFFFF00,timestamp=ctx.message.created_at,url=url)
   memeembed.set_image(url=url)
   memeembed.set_author(name=ctx.author.display_name,icon_url=ctx.author.avatar_url)
