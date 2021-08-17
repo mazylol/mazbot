@@ -1,7 +1,5 @@
-from dotenv import load_dotenv
 import subprocess
 import sys
-load_dotenv()
 def install():
  subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
 packagesoption = input('Warning this is about to install a bunch of packages, continue? (y/n) ')
@@ -9,6 +7,8 @@ if packagesoption == 'y':
  install()
 if packagesoption == 'n':
  exit()
+from dotenv import load_dotenv
+load_dotenv()
 token = input('Provide your discord bot token: ')
 reddityesno = input('Do you want reddit? (y/n)')
 if reddityesno == 'y':
