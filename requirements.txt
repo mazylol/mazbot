@@ -6,9 +6,7 @@ async-timeout
 asyncio
 attrs
 backports.entry-points-selectable
-beautifulsoup9
 byte
-bytesdev
 CacheControl
 certifi
 cffi
@@ -16,10 +14,9 @@ chardet
 charset-normalizer
 click
 colorama
-contextlibpost
 cryptography
 discord
-discordpy
+discord.py
 distlib
 distro
 Django
@@ -29,18 +26,13 @@ geojson
 geopy
 google
 greenlet
-htmllib
 idna
 image
 more-itertools
 msgpack
 multidict
-neovim
-node9
 odict
 ordered-set
-packaging9
-pep
 Pillow
 pip
 platformdirs
@@ -68,10 +60,7 @@ team
 toml
 tomli
 typing-extensions
-ufw
-urllib
 virtualenv
-weather9
 webencodings
 Werkzeug
 xmltodict
@@ -85,4 +74,4 @@ zope.interface
 zope.lifecycleevent
 yahoo_fin
 asyncpraw
-dotenv
+python-dotenv
