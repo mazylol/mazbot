@@ -5,7 +5,7 @@ A multi purpose discord bot that can do pretty much everything
 
 ## Authors
 
-- [@IzzMazy](https://www.github.com/IzzMazy)
+- [@mazylol](https://www.github.com/mazylol)
 
   
 ## Setup
