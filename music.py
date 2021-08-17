@@ -87,14 +87,14 @@ class music(commands.Cog):
                     await self.play_music()
 
     @commands.command(name="queue", help="Displays the current songs in queue")
-    async def q(self, ctx, *,args):
+    async def q(self, ctx):
         retval = ""
         for i in range(0, len(self.music_queue)):
             retval += self.music_queue[i][0]['title'] + "\n"
 
         print(retval)
         if retval != "":
-            await ctx.send(retval)
+            await ctx.send(f"`{retval}`")
         else:
             await ctx.send("`No music in queue`")
 
@@ -109,14 +109,12 @@ class music(commands.Cog):
     async def leave(self, ctx):
      voice_channel = ctx.author.voice.channel
      if voice_channel is None:
-         await ctx.send('Nice')
+         await ctx.send('You are not in a vc dumb fuck')
      else:
          if self.vc != "" and self.vc:
              self.music_queue.clear()
              self.vc.stop()
              await ctx.voice_client.disconnect()
-
-
 
     @commands.command(name="noworky", help="Fixes for common problems")
     async def noworky(self, ctx):
