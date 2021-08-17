@@ -58,12 +58,15 @@ class scraping(commands.Cog):
    )
   subreddit = await reddit.subreddit(sub)
   all_subs = []
-  top = subreddit.hot(limit=100)
+  top = subreddit.hot(limit=175)
   async for submission in top:
    all_subs.append(submission)
   random_sub = random.choice(all_subs)
   name = random_sub.title
   url = random_sub.url
+  if 'gifv' in url:
+   await msg.edit(content=url)
+   return
   memeembed = Embed(title=f'__{name}__',color=0xFFFF00,timestamp=ctx.message.created_at,url=url)
   memeembed.set_image(url=url)
   memeembed.set_author(name=ctx.author.display_name,icon_url=ctx.author.avatar_url)
@@ -74,5 +77,5 @@ class scraping(commands.Cog):
  @commands.command(name='stock')
  async def stock(self, ctx, *, args):
   price = si.get_live_price(args)
-  priceembed = Embed(title=f'Stock price for {args}',description='Price: {:.2f}'.format(price),color=0xFFFF00)
+  priceembed = Embed(title=f'Stock price for {args}',description='Price: ${:.2f}'.format(price),color=0xFFFF00)
   await ctx.reply(embed=priceembed)
