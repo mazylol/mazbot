@@ -1,10 +1,8 @@
 import subprocess
 import sys
-def install():
- subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
 packagesoption = input('Warning this is about to install a bunch of packages, continue? (y/n) ')
 if packagesoption == 'y':
- install()
+ subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
 if packagesoption == 'n':
  exit()
 from dotenv import load_dotenv
