@@ -56,7 +56,6 @@ setuptools
 six
 soupsieve
 sqlparse
-team
 toml
 tomli
 typing-extensions
