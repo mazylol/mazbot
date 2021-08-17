@@ -46,23 +46,23 @@ class image(commands.Cog):
   pfpembed.set_image(url=pfp)
   await ctx.reply(embed=pfpembed)
 
- @commands.command(name='rape')
+ @commands.command(name='seggs')
  async def rape(self, ctx, user:discord.Member = (None)):
   if user is None:
    await ctx.reply('`Error: Needs a target`')
    return
   else:
-   rape = Image.open("images/rape.jpg")
+   rape = Image.open("images/seggs.jpg")
    author = ctx.author.avatar_url_as(size=128)
    authdata = BytesIO(await author.read())
    authpfp = Image.open(authdata)
    authpfp = authpfp.resize((131,131))
    rape.paste(authpfp, (293,37))
-   rape.save("images/finishedrape.jpg")
+   rape.save("images/finishedseggs.jpg")
    target = user.avatar_url_as(size=128)
    userdata = BytesIO(await target.read())
    userpfp = Image.open(userdata)
    userpfp = userpfp.resize((131,131))
    rape.paste(userpfp, (76,320))
-   rape.save("images/finishedrape.jpg")
-   await ctx.reply(file=discord.File("images/finishedrape.jpg"))
+   rape.save("images/finishedseggs.jpg")
+   await ctx.reply(file=discord.File("images/finishedseggs.jpg"))
