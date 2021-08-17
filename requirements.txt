@@ -1,5 +1,4 @@
 aiofiles
-aiohttppost
 appdirs
 arrow
 asgiref
