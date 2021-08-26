@@ -4,8 +4,6 @@ from discord.ext import commands
 from discord import Embed
 import random
 import asyncio
-bot = discord.Client()
-bot = commands.Bot(command_prefix='~')
 
 class responses(commands.Cog):
  def __init__(self, bot):
@@ -33,8 +31,14 @@ class responses(commands.Cog):
   await ctx.reply(embed=merica)
 
  @commands.command(name='die')
- async def die(self,ctx):
-  die = Embed(title='You died lol',description=ctx.author.mention + ' was hit by a bus full of fortnite players. After they left a few tire marks on the body they got out and dabbed on them like the little shits they are. How embarrassing :man_facepalming:',color=0xFFFF00)
+ async def die(self,ctx, user:discord.Member = (None)):
+  if user is None:
+   user = ctx.message.author
+  responses = [
+   user.mention + ' was hit by a bus full of fortnite players. After they left a few tire marks on the body they got out and dabbed on them like the little shits they are. How embarrassing :man_facepalming:.',
+   "It was a nice sunny day in Santa Monica California. " + user.mention + " was sitting on the beach having an amazing relaxing day. UNTIL A BOEING 747 WENT NOSE FIRST INTO THEM. They died."
+  ]
+  die = Embed(title='You died lol',description=random.choice(responses),color=0xFFFF00)
   await ctx.reply(embed=die)
 
  @commands.command(name='pepe')

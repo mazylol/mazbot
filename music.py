@@ -2,10 +2,6 @@
 import discord
 from discord.ext import commands
 from youtube_dl import YoutubeDL
-bot = discord.Client()
-bot = commands.Bot(command_prefix='~')
-
-
 
 class music(commands.Cog):
     def __init__(self, bot):

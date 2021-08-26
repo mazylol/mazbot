@@ -9,7 +9,7 @@ from helper import helper, helper
 from responses import responses, responses
 from image import image, image
 from scraping import scraping, scraping
-bot = discord.Client
+bot = discord.AutoShardedClient()
 bot = commands.Bot(command_prefix='~')
 bot.add_cog(music(bot))
 bot.add_cog(helper(bot))

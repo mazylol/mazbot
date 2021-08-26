@@ -4,8 +4,6 @@ from discord.ext import commands
 from discord import Embed
 from PIL import Image
 from io import BytesIO
-bot = discord.Client()
-bot = commands.Bot(command_prefix='~')
 
 class image(commands.Cog):
  def __init__(self, bot):

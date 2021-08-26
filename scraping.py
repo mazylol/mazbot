@@ -10,8 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 from yahoo_fin import stock_info as si
-bot = discord.Client()
-bot = commands.Bot(command_prefix='~')
 
 class scraping(commands.Cog):
  def __init__(self, bot):
@@ -67,6 +65,10 @@ class scraping(commands.Cog):
   if 'gifv' in url:
    await msg.edit(content=url)
    return
+  if "i.redd.it" not in url:
+   await msg.edit(content=url)
+   return
+  print(url)
   memeembed = Embed(title=f'__{name}__',color=0xFFFF00,timestamp=ctx.message.created_at,url=url)
   memeembed.set_image(url=url)
   memeembed.set_author(name=ctx.author.display_name,icon_url=ctx.author.avatar_url)
