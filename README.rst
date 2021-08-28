@@ -3,11 +3,11 @@ Barry B. Benson
 .. image:: https://discord.com/api/guilds/681981489663311945/embed.png
    :target: https://discord.gg/CHaNsbC
    :alt: Discord server invite
-A multi purpose discord bot that can do pretty much everything
+ A multi purpose discord bot that can do pretty much everything
 
 An Update
 -------------
-This project is kind of at a standstill. As you may know the library I am using is `discord.py <https://github.com/Rapptz/discord.py>`__ which has recently been abandonded view `this <https://gist.github.com/Rapptz/4a2f62751b9600a31a0d3c78100287f1>`__ to see all the info why. Well as this will no longer be updated I will either have to move to a new library, go to discord.js, or stop development all together. I guess I am kind of lost. Will make another update when I have a surefire way of continuing this project.
+This project is kind of at a standstill. As you may know the library I am using is `discord.py <https://github.com/Rapptz/discord.py>`__ which has recently been abandonded view `this <https://gist.github.com/Rapptz/4a2f62751b9600a31a0d3c78100287f1>`__ to see all the info why. So as of now I am using discord4py which is a fork which is apparently going to be maintained. Once better forks come out I will probably switch.
 
 Authors
 -------------

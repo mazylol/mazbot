@@ -1,7 +1,7 @@
 #Responses
-import discord
-from discord.ext import commands
-from discord import Embed
+import discord4py
+from discord4py.ext import commands
+from discord4py import Embed
 import random
 import asyncio
 
@@ -31,7 +31,7 @@ class responses(commands.Cog):
   await ctx.reply(embed=merica)
 
  @commands.command(name='die')
- async def die(self,ctx, user:discord.Member = (None)):
+ async def die(self,ctx, user:discord4py.Member = (None)):
   if user is None:
    user = ctx.message.author
   responses = [
@@ -115,7 +115,7 @@ class responses(commands.Cog):
   await ctx.reply(args)
 
  @commands.command(name='info')
- async def info(self,ctx, user:discord.Member = (None)):
+ async def info(self,ctx, user:discord4py.Member = (None)):
   rando_insults = [
    "They are a registered sex offender!",
    "They hate babies!",
@@ -294,7 +294,7 @@ class responses(commands.Cog):
 	  await ctx.reply(j)
 
  @commands.command(name='hack')
- async def hack(self,ctx,user:discord.Member = (None)):
+ async def hack(self,ctx,user:discord4py.Member = (None)):
   homeworkfolder = [
    'Mom',
    'Dad',

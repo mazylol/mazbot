@@ -1,6 +1,7 @@
 #Music bpt
-import discord
-from discord.ext import commands
+import discord4py
+from discord4py import Embed
+from discord4py.ext import commands
 from youtube_dl import YoutubeDL
 
 class music(commands.Cog):
@@ -37,7 +38,7 @@ class music(commands.Cog):
             #remove the first element as you are currently playing it
             self.music_queue.pop(0)
 
-            self.vc.play(discord.FFmpegPCMAudio(m_url, **self.FFMPEG_OPTIONS), after=lambda e: self.play_next())
+            self.vc.play(discord4py.FFmpegPCMAudio(m_url, **self.FFMPEG_OPTIONS), after=lambda e: self.play_next())
         else:
             self.is_playing = False
 
@@ -59,7 +60,7 @@ class music(commands.Cog):
             #remove the first element as you are currently playing it
             self.music_queue.pop(0)
 
-            self.vc.play(discord.FFmpegPCMAudio(m_url, **self.FFMPEG_OPTIONS), after=lambda e: self.play_next())
+            self.vc.play(discord4py.FFmpegPCMAudio(m_url, **self.FFMPEG_OPTIONS), after=lambda e: self.play_next())
         else:
             self.is_playing = False
 
@@ -114,7 +115,7 @@ class music(commands.Cog):
 
     @commands.command(name="noworky", help="Fixes for common problems")
     async def noworky(self, ctx):
-        nowrk = discord.Embed(title='Music Help',description='**Link plays the wrong song:** If you experience this hit the share button and use that link instead of the one in the search bar\n\n**If it says cannot download song:** Once again use the link that is in the share page not the search bar\n\n',color=0xF83252)
+        nowrk = Embed(title='Music Help',description='**Link plays the wrong song:** If you experience this hit the share button and use that link instead of the one in the search bar\n\n**If it says cannot download song:** Once again use the link that is in the share page not the search bar\n\n',color=0xF83252)
         nowrk.set_image(url='https://www.computerhope.com/issues/pictures/youtube-share-android.jpg')
         await ctx.send(embed=nowrk)
 
