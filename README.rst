@@ -1,9 +1,6 @@
 Barry B. Benson
-==========
-.. image:: https://discord.com/api/guilds/681981489663311945/embed.png
-   :target: https://discord.gg/CHaNsbC
-   :alt: Discord server invite
- A multi purpose discord bot that can do pretty much everything
+===============
+A multi purpose discord bot that can do pretty much everything
 
 An Update
 -------------
