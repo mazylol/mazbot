@@ -10,7 +10,7 @@ load_dotenv()
 token = input('Provide your discord bot token: ')
 reddityesno = input('Do you want reddit? (y/n)')
 if reddityesno == 'y':
- clientid = input('\n\n\n\nProvide your client_id: ')
+ clientid = input('Provide your client_id: ')
  clientsecret = input('Provide your client_secret: ')
  username = input('Provide your application username: ')
  password = input('Provide your application password: ')
