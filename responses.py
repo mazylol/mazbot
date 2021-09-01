@@ -14,8 +14,8 @@ class responses(commands.Cog):
   godquotes = Embed(title='Aids Aim',description='*Ha ha stupid n word. I would say your aim is cancer, but I fucked your mom*',color=0xFFFF00)
   await ctx.reply(embed=godquotes)
 
- @commands.command(name='MazyWifey')
- async def Mazywifey(self,ctx):
+ @commands.command(name='mazywifey')
+ async def mazywifey(self,ctx):
   mazywife = Embed(title='The future wifey',description='<@798022873960415262> luv',color=0xFFFF00)
   await ctx.reply(embed=mazywife)
 
@@ -89,7 +89,7 @@ class responses(commands.Cog):
 
  @commands.command(name='update')
  async def update(self,ctx):
-  update = Embed(title='Update schedule', description='This gets updated essenitally whenever @Mazy is bored or has a funny idea', color=0xFFFF00)
+  update = Embed(title='Update schedule', description='This gets updated essenitally whenever <@489959482860896260> is bored or has a funny idea', color=0xFFFF00)
   update.set_thumbnail(url = 'https://www.iquanti.com/wp-content/uploads/2018/03/google-update.jpg')
   await ctx.reply(embed=update)
 
@@ -147,15 +147,15 @@ class responses(commands.Cog):
   yourmom.set_image(url='http://taggmagazine.com/wp-content/uploads/2013/07/fortune1.jpg')
   await ctx.reply(embed=yourmom)
 
- @commands.command(name='whois_Mazy')
- async def whois_Mazy(self,ctx):
-  mazy = Embed(title='Mazy',description='Never leaves his pc, likes linux a little too much \n\n **Youtube:** https://www.youtube.com/channel/UCTU12OQOJq55jgqM88P8q0w \n\n **Twitch:** https://twitch.tv/izzmazy \n\n **Twitter:** https://twitter.com/mazylol \n\n **Instagram:** https://www.instagram.com/izzmazy/ \n\n **Steam Profile:** https://steamcommunity.com/id/izzmazy/ \n\n **Reddit:** https://www.reddit.com/user/inmemumscar06 \n\n ',color=0xFFFF00)
-  mazy.set_thumbnail(url='https://i.pinimg.com/564x/88/fa/b7/88fab7fd12ecd9c4b165922feac2b354.jpg')
+ @commands.command(name='whois_mazy')
+ async def whois_mazy(self,ctx):
+  mazy = Embed(title='mazy',description='Never leaves his pc, likes linux a little too much \n\n **Youtube:** https://www.youtube.com/channel/UCTU12OQOJq55jgqM88P8q0w \n\n **Twitch:** https://twitch.tv/izzmazy \n\n **Twitter:** https://twitter.com/mazylol \n\n **Instagram:** https://www.instagram.com/izzmazy/ \n\n **Steam Profile:** https://steamcommunity.com/id/izzmazy/ \n\n **Reddit:** https://www.reddit.com/user/inmemumscar06 \n\n ',color=0xFFFF00)
+  mazy.set_thumbnail(url='https://i1.sndcdn.com/artworks-000161908486-comet0-t500x500.jpg')
   await ctx.reply(embed=mazy)
 
- @commands.command(name='Mazyquotes')
- async def Mazyquotes(self,ctx):
-  mazquotes = Embed(title='Mazy Quotes',description="***I'm gonna give blowies at the orphanage*** -Mazy\n\n***Mazy, they're toddlers*** -BT\n\n***And?*** -Mazy",color=0xFFFF00)
+ @commands.command(name='mazyquotes')
+ async def mazyquotes(self,ctx):
+  mazquotes = Embed(title='mazy Quotes',description="***I'm gonna give blowies at the orphanage*** -mazy\n\n***mazy, they're toddlers*** -BT\n\n***And?*** -mazy",color=0xFFFF00)
   await ctx.reply(embed=mazquotes)
 
  @commands.command(name='wholoveshim')
@@ -183,12 +183,12 @@ class responses(commands.Cog):
   littlegirl = Embed(title='Little Girls',description="https://www.youtube.com/watch?v=6ltAVRyeqHk",color=0xFFFF00)
   await ctx.reply(embed=littlegirl)
  
- @commands.command(name='YeeYeeHaircut')
+ @commands.command(name='yeeyeehaircut')
  async def YeeYeeHaircut(self,ctx):
   yeeyeehc = Embed(title='Yee Yee Haircut',description="***Ah, nigga, don't hate me 'cause I'm beautiful, nigga. Maybe if you got rid of that old yee-yee ass haircut you got you'd get some bitches on your dick. Oh, better yet, maybe Tanisha'll call your dog-ass if she ever stop fuckin' with that brain surgeon or lawyer she fucking with. Niggaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa***",color=0xFFFF00)
   await ctx.reply(embed=yeeyeehc)
  
- @commands.command(name='TheTruth')
+ @commands.command(name='thetruth')
  async def TheTruth(self,ctx):
   truth = Embed(title='Truthbomb',description="***Maybe Khans kill people without looking them in the face, but I ain't a fink, dig? You've made your last delivery, kid. Sorry you got twisted up in this scene. From where you're kneeling it must seem like an 18-carat run of bad luck. But, truth is... the game was rigged from the start.***",color=0xFFFF00)
   await ctx.reply(embed=truth)
@@ -204,45 +204,40 @@ class responses(commands.Cog):
   caveman.set_image(url="https://media.discordapp.net/attachments/814345735226785812/814682754079260712/image0.gif")
   await ctx.reply(embed=caveman)
  
- @commands.command(name='Loser') 
+ @commands.command(name='loser') 
  async def Loser(self,ctx):
   loser = Embed(title='What a loser',color=0xFFFF00)
   loser.set_image(url="https://media.discordapp.net/attachments/814345735226785812/814684633530499113/image0.png?width=420&height=401")
   await ctx.reply(embed=loser)
 
- @commands.command(name='BigTiddiesAndTrauma')
+ @commands.command(name='bigtiddiesandtrauma')
  async def BigTiddiesAndTrauma(self,ctx):
   bigtittiesandtruama = Embed(title='Big Tiddies *and trauma*',color=0xFFFF00)
   bigtittiesandtruama.set_image(url='https://i.redd.it/19erqlus9rr21.jpg')
   await ctx.reply(embed=bigtittiesandtruama)
 
- @commands.command(name='BigAnimeTiddies')
- async def BigAnimeTiddies(self,ctx):
-  embed = Embed(title = "Random Nhentai Number", description = (random.randint(111111,999999)), color = (0xFFFF00))
-  await ctx.reply(embed = embed)
-
- @commands.command(name='LightningMcqueen')
+ @commands.command(name='lightningmcqueen')
  async def LightningMcqueen(self,ctx):
   lightningmcfuck = Embed(title='KACHOW',color=0xFFFF00)
   lightningmcfuck.set_image(url="https://i.ytimg.com/vi/3S6uNw-D6RA/maxresdefault.jpg")
   await ctx.reply(embed=lightningmcfuck)
 
- @commands.command(name='DoinYaMom')
+ @commands.command(name='doinyamom')
  async def DoinYaMom(self,ctx):
   doinyamum = Embed(title="Doin ya mom",description="Doin ya mom",color=0xFFFF00)
   await ctx.reply(embed=doinyamum)
 
- @commands.command(name='Nukes')
+ @commands.command(name='nukes')
  async def Nukes(self,ctx):
   nukes = Embed(title='Nukes',description="***I am become death, destroyer of worlds***",color=0xFFFF00)
   await ctx.reply(embed=nukes)
 
- @commands.command(name='Oath')
+ @commands.command(name='oath')
  async def Oath(self,ctx):
   oath = Embed(title='The Oath',description="***I, Barry B. Benson swear on my worthless bot life to say nothing but the truth***",color=0xFFFF00)
   await ctx.reply(embed=oath)
 
- @commands.command(name='BestGameEver')
+ @commands.command(name='bestgameever')
  async def BestGameEver(self,ctx):
   bestgamever = Embed(title='ALL BAD',description="***EVERY GAME EVER PLAYED IS A PIECE OF SHIT***",color=0xFFFF00)
   await ctx.reply(embed=bestgamever)

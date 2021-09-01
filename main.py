@@ -7,13 +7,11 @@ import os
 from helper import helper, helper
 from responses import responses, responses
 from scraping import scraping, scraping
-from music import Music, Music
 bot = discord4py.Client()
 bot = commands.Bot(command_prefix='~',help_command=None)
 bot.add_cog(helper(bot))
 bot.add_cog(responses(bot))
 bot.add_cog(scraping(bot))
-bot.add_cog(Music(bot))
 
 @bot.event
 async def on_ready():
