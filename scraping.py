@@ -1,5 +1,5 @@
-from discord4py.ext import commands
-from discord4py import Embed
+from discord.ext import commands
+from discord import Embed
 import requests
 import asyncpraw
 import random
