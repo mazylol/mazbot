@@ -7,7 +7,7 @@ import os
 from helper import helper, helper
 from responses import responses, responses
 from scraping import scraping, scraping
-bot = discord.Client()
+bot = discord.Bot()
 bot = commands.Bot(command_prefix='~',help_command=None)
 bot.add_cog(helper(bot))
 bot.add_cog(responses(bot))
