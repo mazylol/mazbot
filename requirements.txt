@@ -15,7 +15,8 @@ charset-normalizer
 click
 colorama
 cryptography
-discord4py[voice]
+py-cord
+py-cord[voice]
 distlib
 distro
 Django
