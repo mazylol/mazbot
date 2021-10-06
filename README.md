@@ -3,7 +3,7 @@
 Barry is a discord bot that does a bunch of memey and somewhat useful stuff.
 
 ## Installation
-1. Clone the repo by doing `git clone https://github.com/mazylo/barry`
+1. Clone the repo by doing `git clone https://github.com/mazylol/barry`
 2. Run the automated setup script by doing `python main.py`
 
 ## Usage
