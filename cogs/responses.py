@@ -330,7 +330,7 @@ class responses(commands.Cog):
    await asyncio.sleep(1)
    await hackmsg.edit(content="<:Nigeriancat:849547273339142154>**Access obtained**<:Nigeriancat:849547273339142154>")
    await asyncio.sleep(2)
-   await hackmsg.edit(content="**Navigating to `C:\Homework`**")
+   await hackmsg.edit(content="**Navigating to homework folder**")
    await asyncio.sleep(3)
    await hackmsg.edit(content="**Planting gay furry porn.**")
    await asyncio.sleep(1)
@@ -404,3 +404,6 @@ class responses(commands.Cog):
    await ctx.reply('<a:applecat:799111032705384498>')
   if args == ':animeroll:':
    await ctx.reply('<a:animeroll:799106437942345728>')
+
+def setup(bot):
+ bot.add_cog(responses(bot))

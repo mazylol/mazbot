@@ -77,3 +77,6 @@ class scraping(commands.Cog):
   price = si.get_live_price(args)
   priceembed = Embed(title=f'Stock price for {args}',description='Price: ${:.2f}'.format(price),color=0xFFFF00)
   await ctx.reply(embed=priceembed)
+
+def setup(bot):
+ bot.add_cog(scraping(bot))

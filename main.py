@@ -4,16 +4,12 @@ from discord.ext import commands
 from dotenv import load_dotenv
 load_dotenv()
 import os
-from helper import helper, helper
-from responses import responses, responses
-from scraping import scraping, scraping
-from images import images, images
 bot = discord.Client()
 bot = commands.Bot(command_prefix='~',help_command=None)
-bot.add_cog(helper(bot))
-bot.add_cog(responses(bot))
-bot.add_cog(scraping(bot))
-bot.add_cog(images(bot))
+
+for filename in os.listdir('cogs'):
+ if filename.endswith('.py'):
+  bot.load_extension(f'cogs.{filename[:-3]}')
 
 @bot.event
 async def on_ready():

@@ -47,3 +47,6 @@ class images(commands.Cog):
   gay.paste(pfp, (570, 85))
   gay.save("images/finishedgay.jpg")
   await ctx.reply(file=discord.File("images/finishedgay.jpg"))
+
+def setup(bot):
+ bot.add_cog(images(bot))

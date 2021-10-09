@@ -13,7 +13,6 @@ class helper(commands.Cog):
  async def response(self, ctx):
   response = Embed(title="Response Help",color=0xFFFF00)
   response.set_thumbnail(url='https://bloximages.chicago2.vip.townnews.com/ncnewsonline.com/content/tncms/assets/v3/editorial/5/70/570c3871-56b3-5883-b05e-f5963c507a57/54012dc24880f.image.jpg?resize=500%2C657')
-  response.add_field(name='')
   await ctx.send(embed=response)
 
  @commands.command(name="scrapinghelp")
@@ -22,3 +21,6 @@ class helper(commands.Cog):
   scraping.set_thumbnail(url='https://bloximages.chicago2.vip.townnews.com/ncnewsonline.com/content/tncms/assets/v3/editorial/5/70/570c3871-56b3-5883-b05e-f5963c507a57/54012dc24880f.image.jpg?resize=500%2C657')
   scraping.add_field(name="d",value="d",inline=False)
   await ctx.send(embed=scraping)
+
+def setup(bot):
+ bot.add_cog(helper(bot))
