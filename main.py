@@ -1,4 +1,3 @@
-#The file to run everything
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -13,7 +12,7 @@ for filename in os.listdir('cogs'):
 
 @bot.event
 async def on_ready():
- game = discord.Game('You like jazz? | ~help')
+ game = discord.Game('~help')
  await bot.change_presence(status=discord.Status.online, activity=game)
  print('We have logged in as {0.user}'.format(bot))
 
