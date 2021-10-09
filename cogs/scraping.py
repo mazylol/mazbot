@@ -7,7 +7,7 @@ from geopy.geocoders import Nominatim
 from dotenv import load_dotenv
 load_dotenv()
 import os
-from yahoo_fin import stock_info as si
+from googlesearch import search
 
 class scraping(commands.Cog):
  def __init__(self, bot):
@@ -72,11 +72,10 @@ class scraping(commands.Cog):
   await ctx.reply(embed=memeembed)
   await msg.delete()
 
- @commands.command(name='stock')
- async def stock(self, ctx, *, args):
-  price = si.get_live_price(args)
-  priceembed = Embed(title=f'Stock price for {args}',description='Price: ${:.2f}'.format(price),color=0xFFFF00)
-  await ctx.reply(embed=priceembed)
+ @commands.command(name='search')
+ async def search(self, ctx, *, arg):
+  for j in search(arg, tld="co.in", num=1, stop=1, pause=2):
+	  await ctx.reply(j)
 
 def setup(bot):
  bot.add_cog(scraping(bot))
