@@ -8,7 +8,7 @@ Mazbot is a multi purpose discord bot that does a myriad of stupid things
 4. Enjoy your bot
 
 ## Self hosted
-If you do not want to run your own instance of the bot you can invite the public one [here]("https://discord.com/api/oauth2/authorize?client_id=815455699114262568&permissions=8&scope=bot%20applications.commands")
+If you do not want to run your own instance of the bot you can invite the public one at https://discord.com/api/oauth2/authorize?client_id=815455699114262568&permissions=8&scope=bot%20applications.commands
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
