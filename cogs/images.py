@@ -48,5 +48,17 @@ class images(commands.Cog):
   gay.save("images/finishedgay.jpg")
   await ctx.reply(file=discord.File("images/finishedgay.jpg"))
 
+ @commands.command(name='quality')
+ async def quality(self,ctx):
+  quality = Embed(title='Now thats one fine truck :pickup_truck:', color=0xFFFF00)
+  quality.set_image(url='https://www.motorbiscuit.com/wp-content/uploads/2021/01/Auto-Show-Chevy-Silverado-Display-1024x682.jpg')
+  await ctx.reply(embed=quality)
+
+ @commands.command(name='trash')
+ async def trash(self,ctx):
+  trash = Embed(title='Fords are trashy :nauseated_face:', color=0xFFFF00)
+  trash.set_image(url='https://i.redd.it/lzohorzdgrn21.jpg')
+  await ctx.reply(embed=trash)
+
 def setup(bot):
  bot.add_cog(images(bot))

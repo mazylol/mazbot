@@ -33,7 +33,7 @@ class scraping(commands.Cog):
    temp_max=str(y["temp_max"])
    z = x["weather"]
    weather_description = str(z[0]["description"])
-   wethr = Embed(title='Weather',color=0xFFFF00)
+   wethr = Embed(title='Weather')
    wethr.add_field(name='Current Temperature',value=current_temperature + " Ferenheit",inline=False)
    wethr.add_field(name='Low',value=temp_min + " Ferenheit",inline=False)
    wethr.add_field(name='High',value=temp_max + " Ferenheit",inline=False)
@@ -48,7 +48,7 @@ class scraping(commands.Cog):
   reddit = asyncpraw.Reddit(
    client_id = os.getenv("client_id"),
    client_secret = os.getenv("client_secret"),
-   username = "barrybensonbot",
+   username = os.getenv("username"),
    password = os.getenv("password"),
    user_agent = "pythonpraw"
    )
@@ -66,7 +66,7 @@ class scraping(commands.Cog):
   if "i.redd.it" not in url:
    await msg.edit(content=url)
    return
-  memeembed = Embed(title=f'__{name}__',color=0xFFFF00,timestamp=ctx.message.created_at,url=url)
+  memeembed = Embed(title=f'__{name}__',timestamp=ctx.message.created_at,url=url)
   memeembed.set_image(url=url)
   memeembed.set_footer(text='Here is your meme!')
   await ctx.reply(embed=memeembed)
