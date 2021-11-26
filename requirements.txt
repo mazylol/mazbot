@@ -1,6 +1,5 @@
 aiofiles
 appdirs
-arrow
 asgiref
 async-timeout
 asyncio
@@ -39,7 +38,6 @@ platformdirs
 plumber
 ply
 progress
-psutil
 pycparser
 PyNaCl
 pynvim
@@ -71,6 +69,5 @@ zope.event
 zope.hookable
 zope.interface
 zope.lifecycleevent
-yahoo_fin
 asyncpraw
 python-dotenv

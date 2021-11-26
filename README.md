@@ -3,7 +3,7 @@ Mazbot is a multi purpose discord bot that does a myriad of stupid things
 
 ## Setup
 1. Clone down the repo
-2. Run the setup.py script
+2. Run the setup.py script; warning when it installs pandas, on windows it errors out a bunch, just let it do it's thing
 3. Run main.py
 4. Enjoy your bot
 

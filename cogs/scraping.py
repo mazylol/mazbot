@@ -34,9 +34,9 @@ class scraping(commands.Cog):
    z = x["weather"]
    weather_description = str(z[0]["description"])
    wethr = Embed(title='Weather')
-   wethr.add_field(name='Current Temperature',value=current_temperature + " Ferenheit",inline=False)
-   wethr.add_field(name='Low',value=temp_min + " Ferenheit",inline=False)
-   wethr.add_field(name='High',value=temp_max + " Ferenheit",inline=False)
+   wethr.add_field(name='Current Temperature',value=current_temperature + " Fahrenheit",inline=False)
+   wethr.add_field(name='Low',value=temp_min + " Fahrenheit",inline=False)
+   wethr.add_field(name='High',value=temp_max + " Fahrenheit",inline=False)
    wethr.add_field(name='Atmospheric Pressure (in hPa)',value=current_pressure,inline=False)
    wethr.add_field(name='Humidity',value=current_humidity + "%",inline=False)
    wethr.add_field(name='Weather Description',value=weather_description,inline=False)
