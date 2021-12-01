@@ -17,7 +17,7 @@ class scraping(commands.Cog):
  async def weather(self, ctx, *, args):
   api_key = os.getenv('api_key')
   base_url = "http://api.openweathermap.org/data/2.5/weather?"
-  locator = Nominatim(user_agent="myGeocoder")
+  locator = Nominatim(user_agent="mazbotgeocoder")
   location = locator.geocode(str(args))
   lat = str(location.latitude)
   lon = str(location.longitude)

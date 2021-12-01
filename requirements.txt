@@ -16,6 +16,7 @@ colorama
 cryptography
 py-cord
 py-cord[voice]
+py-cord[speed]
 distlib
 distro
 Django
@@ -40,7 +41,6 @@ ply
 progress
 pycparser
 PyNaCl
-pynvim
 pyOpenSSL
 pyowm
 pyparsing
