@@ -37,7 +37,7 @@ class responses(commands.Cog):
   
  @commands.command(name='daddy')
  async def daddy(self,ctx):
-  daddy = Embed(title='I am your daddy', color=0xFFFF00)
+  daddy = Embed(title='I am your daddy uwu', color=0xFFFF00)
   daddy.set_image(url = 'https://i1.sndcdn.com/avatars-v3dqrzWvuGVwgSvo-u5wDAA-t500x500.jpg')
   await ctx.reply(embed=daddy)
 
