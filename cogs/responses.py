@@ -31,7 +31,7 @@ class responses(commands.Cog):
 
  @commands.command(name='anime')
  async def anime(self,ctx):
-  anime = Embed(title='My Favorite Animes', description='The Bee Movie \n\n Demon Slayer \n\n hunter x hunter \n\n One Punch Man \n\n My Hero Academia \n\n Blue Exorcist \n\n The Seven Deadly Sins \n\n Naruto', color=0xFFFF00)
+  anime = Embed(title='My Favorite Animes', description='The Bee Movie \n\n Demon Slayer \n\n hunter x hunter \n\n One Punch Man \n\n Blue Exorcist \n\n The Seven Deadly Sins \n\n Naruto', color=0xFFFF00)
   anime.set_thumbnail(url='https://cdn.vox-cdn.com/thumbor/J2XSqgAqREtpkGAWa6rMhkHA1Y0=/0x0:1600x900/1400x933/filters:focal(672x322:928x578):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/66320060/Tanjiro__Demon_Slayer_.0.png')
   await ctx.reply(embed=anime)
   
