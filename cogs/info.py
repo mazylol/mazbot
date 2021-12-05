@@ -13,6 +13,7 @@ class info(commands.Cog):
  async def response(self,ctx):
   response = Embed(title="Response Help")
   response.add_field(name="anime",value="Sends a list of the best animes.",inline=True)
+  response.add_field(name="ahegao", value="Owa Owa", inline=True)
   response.add_field(name="badaim",value="Haha loser get gud lol.",inline=True)
   response.add_field(name="daddy",value="Chu Papi.",inline=True)
   response.add_field(name="degenerate",value="Complete degen.",inline=True)
@@ -36,8 +37,8 @@ class info(commands.Cog):
   response.add_field(name="update",value="Update schedule.",inline=True)
   response.add_field(name="urdad",value="Redneck",inline=True)
   response.add_field(name="urmom",value="Finger lickin good.",inline=True)
-  response.add_field(name="war",value="I am death.",inline=True)
   response2= Embed(title="")
+  response2.add_field(name="war",value="I am death.",inline=True)
   response2.add_field(name="weebdepression",value="Depressed ass.",inline=True)
   response2.add_field(name="yeetus",value="Speedy",inline=True)
   response2.add_field(name="yeeyeehaircut",value="Anotha classic.",inline=True)
