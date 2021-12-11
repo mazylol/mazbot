@@ -14,9 +14,7 @@ charset-normalizer
 click
 colorama
 cryptography
-py-cord
-py-cord[voice]
-py-cord[speed]
+git+https://github.com/Pycord-Development/pycord
 distlib
 distro
 Django
