@@ -15,5 +15,6 @@ async def on_ready():
  game = discord.Game('~help')
  await bot.change_presence(status=discord.Status.online, activity=game)
  print('We have logged in as {0.user}'.format(bot))
+ print("I'm in " + str(len(bot.guilds)) + " servers!")
 
 bot.run(os.getenv("TOKEN"))
