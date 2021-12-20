@@ -1,4 +1,4 @@
-# Mazbot[ ![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSES) [ ![Discord](https://discord.com/api/guilds/681981489663311945/embed.png)](https://discord.gg/CHaNsbC) 
+# Mazbot[ ![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSES) [ ![Discord](https://discord.com/api/guilds/681981489663311945/embed.png)](https://discord.gg/CHaNsbC) [![wakatime](https://wakatime.com/badge/github/mazylol/mazbot.svg)](https://wakatime.com/badge/github/mazylol/mazbot)
 Mazbot is a multi purpose discord bot that does a myriad of stupid things
 
 ## Usage/Examples
