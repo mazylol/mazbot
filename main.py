@@ -17,4 +17,4 @@ async def on_ready():
  print('We have logged in as {0.user}'.format(bot))
  print("I'm in " + str(len(bot.guilds)) + " servers!")
 
-bot.run(os.getenv("TESTTOKEN"))
+bot.run(os.getenv("TOKEN"))

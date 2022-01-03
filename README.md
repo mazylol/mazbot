@@ -34,3 +34,5 @@ python main.py
 ```
 
 4. Enjoy your bot :smiley:
+
+Made with love by yours truly
